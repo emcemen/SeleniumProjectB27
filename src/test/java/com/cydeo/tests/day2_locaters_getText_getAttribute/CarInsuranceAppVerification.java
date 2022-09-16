@@ -20,7 +20,7 @@ public class CarInsuranceAppVerification {
         String currentURL = driver.getCurrentUrl();
         currentURL = driver.getCurrentUrl();
         if (currentURL.contains("excelsoirinsurance")) {  // YOU CAN ALSO STORE EXPECTED ONE THAT'S THE COMMON WAY
-            // Like currentURL.contains(expectedURL) AND USE THAT METHOD NOT THE MY WAY
+            // Like currentURL.contains(expectedURL) AND USE THAT METHOD not the above one
             System.out.println("URL verification is PASSED");
         } else {
             System.out.println("URL verification is FAILED");
