@@ -4,7 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Cydeo {
+public class T2_Cydeo {
     public static void main(String[] args) {
         // 1) Set up web driver manager
         WebDriverManager.chromedriver().setup();
