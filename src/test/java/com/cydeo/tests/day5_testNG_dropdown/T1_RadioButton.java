@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class RadioButton {
+public class T1_RadioButton {
 
     public static void main(String[] args) {
 
