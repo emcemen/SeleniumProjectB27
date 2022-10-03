@@ -2,6 +2,7 @@ package com.cydeo.tests.day2_locaters_getText_getAttribute;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,12 +21,20 @@ public class H1_Day2 {
                              driver.get("https://www.etsy.com ");
 
 //                           3. Search for “wooden spoon”
-                             WebElement woodenSpoon = driver.findElement(By.linkText("wooden spoon"));
-                             woodenSpoon.click();
-                             Thread.sleep(3000);
-                             driver.quit();
+                             WebElement searchBox = driver.findElement(By.id("global-enhancements-search-query"));
+                             searchBox.sendKeys("Wooden Spoon" + Keys.ENTER);
 
-//                           4. Verify title:Expected: “Wooden spoon | Etsy”
+//                           4. Verify title: Expected: “Wooden spoon | Etsy”
+                             String expectedTitle = "Wooden spoon | Etsy";
+                             String actualTitle = driver.getTitle();
+                             if(expectedTitle.equals(actualTitle)){
+                             System.out.println("Test Passed");
+                             }else {
+                             System.out.println("Test Failed");}
+
+                            System.out.println("Expected Title= " + expectedTitle + "\nActual Title= " +actualTitle);
+                            driver.quit();
+    }
 
 
-}}
+}
