@@ -9,6 +9,7 @@ public class ConfigurationReader {
 
     // 1- Create the object of Properties class
     // We need properties class to use methods coming from class like load(), getProperty("key")
+
     private static Properties properties = new Properties();
     // it is static bc we are using it in static method and static block----static part----
     //it is private bc I will be using only in this class----private part----
