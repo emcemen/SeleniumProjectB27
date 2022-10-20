@@ -1,7 +1,9 @@
 package com.cydeo.tests.day12_actions_javascriptexecutor;
 
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -22,10 +24,11 @@ public class ActionsPractice {
         WebElement cydeoLink = Driver.getDriver().findElement(By.linkText("CYDEO"));
 
         actions.moveToElement(cydeoLink).perform();
-
-
+        BrowserUtils.sleep(3); // we put this waiting seconds for purpose of the see how page up is going on.
 
 //        2- Scroll back up to “Home” link using PageUP button
+        actions.sendKeys(Keys.PAGE_UP,Keys.PAGE_UP,Keys.PAGE_UP).perform();
+
 
     }
 }
