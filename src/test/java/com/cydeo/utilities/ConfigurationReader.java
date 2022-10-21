@@ -39,8 +39,11 @@ public class ConfigurationReader {
      * @return --> value for the key. returns null if key is not found
      * driver.get(ConfigurationReader.getProperty("env"))
      */
+
+
         public static String getProperty(String keyword){
-        return properties.getProperty(keyword);
+
+            return properties.getProperty(keyword);
         }
 
 

@@ -33,6 +33,9 @@ public class T1_JavaFaker_Practice {
           WebElement username = Driver.getDriver().findElement(By.xpath("//input[@name='username']"));
           String fakerUsername =faker.gameOfThrones().dragon()+faker.numerify("####");
           username.sendKeys(fakerUsername);
+          faker.numerify("#"+1);
+
+
 
           }
 //        6. Enter email address

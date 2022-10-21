@@ -29,7 +29,7 @@ public class T4_TestNG_Selenium {
 
         //Step 3- Verify if the title is "Google"
         String actualTitle = driver.getTitle();
-        String expectedTitle = "Google";
+        String expectedTitle = "Googles";
 
         Assert.assertEquals(actualTitle,expectedTitle,"Title is not Matching");
 
